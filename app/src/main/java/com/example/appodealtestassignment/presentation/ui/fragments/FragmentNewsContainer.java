@@ -1,4 +1,4 @@
-package com.example.appodealtestassignment.presentation.ui.activities;
+package com.example.appodealtestassignment.presentation.ui.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -22,6 +22,7 @@ import com.example.appodealtestassignment.data.InternetConnectionStatus;
 import com.example.appodealtestassignment.domain.entities.RssNews;
 import com.example.appodealtestassignment.presentation.presenters.ContainerPresenter;
 import com.example.appodealtestassignment.presentation.presenters.ViewFragmentContainer;
+import com.example.appodealtestassignment.presentation.ui.adapters.NewsAdapter;
 
 import java.util.List;
 

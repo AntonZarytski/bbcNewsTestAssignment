@@ -15,6 +15,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.example.appodealtestassignment.R;
 import com.example.appodealtestassignment.presentation.presenters.ActivityPresenter;
 import com.example.appodealtestassignment.presentation.presenters.ActivityView;
+import com.example.appodealtestassignment.presentation.ui.fragments.FragmentNewsContainer;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -23,9 +24,9 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import static com.example.appodealtestassignment.presentation.ui.activities.NewsTypeEnum.ENGLAND_NEWS;
-import static com.example.appodealtestassignment.presentation.ui.activities.NewsTypeEnum.HOME_NEWS;
-import static com.example.appodealtestassignment.presentation.ui.activities.NewsTypeEnum.WORLD_NEWS;
+import static com.example.appodealtestassignment.data.NewsTypeEnum.ENGLAND_NEWS;
+import static com.example.appodealtestassignment.data.NewsTypeEnum.HOME_NEWS;
+import static com.example.appodealtestassignment.data.NewsTypeEnum.WORLD_NEWS;
 
 public class MainActivity extends AppCompatActivity implements ActivityView {
     private final static String TAG = MainActivity.class.getSimpleName();

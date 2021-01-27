@@ -10,9 +10,9 @@ import com.example.appodealtestassignment.rx_helper.ObservableSubscriber;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
-import static com.example.appodealtestassignment.presentation.ui.activities.NewsTypeEnum.ENGLAND_NEWS;
-import static com.example.appodealtestassignment.presentation.ui.activities.NewsTypeEnum.HOME_NEWS;
-import static com.example.appodealtestassignment.presentation.ui.activities.NewsTypeEnum.WORLD_NEWS;
+import static com.example.appodealtestassignment.data.NewsTypeEnum.ENGLAND_NEWS;
+import static com.example.appodealtestassignment.data.NewsTypeEnum.HOME_NEWS;
+import static com.example.appodealtestassignment.data.NewsTypeEnum.WORLD_NEWS;
 
 public class WebRepository {
     private final static String TAG = WebRepository.class.getSimpleName();

@@ -1,4 +1,4 @@
-package com.example.appodealtestassignment.presentation.ui.activities;
+package com.example.appodealtestassignment.data;
 
 public class NewsTypeEnum {
     public final static int ENGLAND_NEWS = 0;

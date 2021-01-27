@@ -6,9 +6,9 @@ import com.example.appodealtestassignment.domain.entities.RssNews;
 
 import java.util.List;
 
-import static com.example.appodealtestassignment.presentation.ui.activities.NewsTypeEnum.ENGLAND_NEWS;
-import static com.example.appodealtestassignment.presentation.ui.activities.NewsTypeEnum.HOME_NEWS;
-import static com.example.appodealtestassignment.presentation.ui.activities.NewsTypeEnum.WORLD_NEWS;
+import static com.example.appodealtestassignment.data.NewsTypeEnum.ENGLAND_NEWS;
+import static com.example.appodealtestassignment.data.NewsTypeEnum.HOME_NEWS;
+import static com.example.appodealtestassignment.data.NewsTypeEnum.WORLD_NEWS;
 
 public class DataGateway implements DataSetter, Gateway {
     private WebRepository webRepository;

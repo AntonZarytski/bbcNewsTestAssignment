@@ -4,7 +4,7 @@ import com.example.appodealtestassignment.domain.UseCaseInputPort;
 import com.example.appodealtestassignment.domain.UseCases;
 import com.example.appodealtestassignment.domain.entities.RssNews;
 import com.example.appodealtestassignment.presentation.OutputDataProvider;
-import com.example.appodealtestassignment.presentation.ui.activities.FragmentNewsContainer;
+import com.example.appodealtestassignment.presentation.ui.fragments.FragmentNewsContainer;
 
 import java.util.List;
 

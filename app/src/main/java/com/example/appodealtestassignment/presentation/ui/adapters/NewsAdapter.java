@@ -1,4 +1,4 @@
-package com.example.appodealtestassignment.presentation.ui.activities;
+package com.example.appodealtestassignment.presentation.ui.adapters;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -18,6 +18,7 @@ import com.example.appodealtestassignment.R;
 import com.example.appodealtestassignment.data.InternetConnectionStatus;
 import com.example.appodealtestassignment.domain.entities.RssNews;
 import com.example.appodealtestassignment.presentation.presenters.ContainerPresenter;
+import com.example.appodealtestassignment.presentation.ui.activities.WebViewActivity;
 import com.google.android.material.card.MaterialCardView;
 
 import java.util.ArrayList;

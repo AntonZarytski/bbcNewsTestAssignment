@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Appodeal Test Assignment</string>
+    <string name="more_details">More details</string>
+    <string name="world">World</string>
+    <string name="home">Home</string>
+    <string name="england">England</string>
+    <string name="check_network_connection">Check network connection</string>
+    <string name="inner_error">Inner error</string>
+    <string name="the_last_update">"The last update: "</string>
+    <string name="hide">Hide</string>
+    <string name="delete_news">Delete a news item?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="check_network_connection_and_refresh_the_page">Check network connection and refresh the page</string>
+</resources>

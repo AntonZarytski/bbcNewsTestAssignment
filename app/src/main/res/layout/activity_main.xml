@@ -6,11 +6,16 @@
     android:fitsSystemWindows="false"
     android:background="@color/pale_gray"
     android:orientation="vertical">
-
+    <com.appodeal.ads.BannerView
+        android:id="@+id/bannerViewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"/>
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager_activity_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/bannerViewId"
         android:layout_above="@id/bottom_navigation" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -20,5 +25,4 @@
         android:background="@color/pale_gray"
         app:menu="@menu/base_menu"
         android:layout_alignParentBottom="true" />
-
 </RelativeLayout>

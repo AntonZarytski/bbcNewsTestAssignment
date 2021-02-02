@@ -1,5 +1,6 @@
 package com.example.appodealtestassignment.presentation.ui.adapters;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
@@ -17,7 +18,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.appodealtestassignment.R;
 import com.example.appodealtestassignment.data.InternetConnectionStatus;
 import com.example.appodealtestassignment.domain.entities.RssNews;
+import com.example.appodealtestassignment.presentation.presenters.ActivityView;
 import com.example.appodealtestassignment.presentation.presenters.ContainerPresenter;
+import com.example.appodealtestassignment.presentation.ui.activities.MainActivity;
 import com.example.appodealtestassignment.presentation.ui.activities.WebViewActivity;
 import com.google.android.material.card.MaterialCardView;
 
@@ -33,10 +36,13 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
     private final int NO = R.string.no;
     private ContainerPresenter presenter;
     private List<RssNews> items;
+    private ActivityView activityView;
+    private int newsWasShownCount;
 
-    public NewsAdapter(ContainerPresenter presenter) {
+    public NewsAdapter(ContainerPresenter presenter, Context context) {
         items = new ArrayList<>();
         this.presenter = presenter;
+        this.activityView = (ActivityView) context;
     }
 
     public void setItems(List<RssNews> items) {
@@ -61,6 +67,11 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         holder.lastUpdate.setText(items.get(position).getItemPubDate());
         holder.rootView.setOnClickListener(v -> {
             if (InternetConnectionStatus.isOnline()) {
+                newsWasShownCount++;
+                if (newsWasShownCount>=3){
+                    newsWasShownCount = 0;
+                    activityView.showInterstitial();
+                }
                 Intent intent = new Intent(holder.moreDetails.getContext(), WebViewActivity.class);
                 intent.putExtra(WebViewActivity.URI_KEY, items.get(position).getItemLink());
                 items.get(position).setWasRead(true);

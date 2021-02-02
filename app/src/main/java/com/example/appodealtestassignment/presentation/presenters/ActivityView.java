@@ -4,4 +4,6 @@ public interface ActivityView {
     void checkNetworkNotification();
 
     void innerErrorNotification();
+
+    void showInterstitial();
 }

@@ -41,6 +41,7 @@ public class FragmentNewsContainer extends Fragment implements ViewFragmentConta
     RecyclerView newsRecycler;
     private ContainerPresenter presenter;
     private NewsAdapter adapter;
+    private Context context;
 
     public static FragmentNewsContainer newInstance(int arg) {
         FragmentNewsContainer fragment = new FragmentNewsContainer();
@@ -48,6 +49,12 @@ public class FragmentNewsContainer extends Fragment implements ViewFragmentConta
         args.putInt(KEY, arg);
         fragment.setArguments(args);
         return fragment;
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        this.context = context;
     }
 
     @Nullable
@@ -64,7 +71,7 @@ public class FragmentNewsContainer extends Fragment implements ViewFragmentConta
     }
 
     private void initRecycler() {
-        adapter = new NewsAdapter(presenter);
+        adapter = new NewsAdapter(presenter, getActivity());
         newsRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
         newsRecycler.setAdapter(adapter);
     }
